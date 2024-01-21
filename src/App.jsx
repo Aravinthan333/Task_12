@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import styles from "./productcard.module.css";
+import styles from "./productcard.css";
 import propTypes from "prop-types";
 
 const data = [
