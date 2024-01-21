@@ -1,6 +1,5 @@
 import "./App.css";
 import { useState } from "react";
-import styles from "./productcard.css";
 import propTypes from "prop-types";
 
 const data = [
@@ -85,19 +84,19 @@ const Card = ({ productName, price }) => {
   };
 
   return (
-    <div className={styles.card}>
-      <div className={styles.image}>
-        <span className={styles.sale}>sale</span>
+    <div className="card">
+      <div className="image">
+        <span className="sale">sale</span>
         <p>450 X 300</p>
       </div>
-      <h3 className={styles.product}>{productName}</h3>
+      <h3 className="product">{productName}</h3>
       <i className="bx bxs-star" style={{ color: "#e0ec07" }}></i>
       <i className="bx bxs-star" style={{ color: "#e0ec07" }}></i>
       <i className="bx bxs-star" style={{ color: "#e0ec07" }}></i>
       <i className="bx bxs-star" style={{ color: "#e0ec07" }}></i>
       <i className="bx bxs-star" style={{ color: "#e0ec07" }}></i>
-      <p className={styles.price}>$ {price}</p>
-      <button className={styles.button} onClick={additems}>
+      <p className="price">$ {price}</p>
+      <button className="button" onClick={additems}>
         {inCart ? "Remove from" : "Add to"} cart
       </button>
     </div>
@@ -112,7 +111,7 @@ Card.propTypes = {
 const Cards = () => {
   return (
     <>
-      <div className={styles.cards}>
+      <div className="cards">
         {data.map((e) => (
           <Card key={e.id} {...e} />
         ))}
