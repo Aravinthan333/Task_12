@@ -72,14 +72,17 @@ const data = [
 ];
 
 // ------------------------------------------------------------------------------------------------------
-
+var cartCount = 0;
 const Card = ({ productName, price }) => {
   const [inCart, setCart] = useState(false);
+  const [count, setCount] = useState(cartCount);
   const additems = () => {
     if (inCart) {
       setCart(false);
+      setCount(count - 1);
     } else {
       setCart(true);
+      setCount(count + 1);
     }
   };
 
@@ -122,8 +125,6 @@ const Cards = () => {
 
 // ------------------------------------------------------------------------------------------------------
 
-let count = 0;
-
 const Logo = () => (
   <span className="logo">
     <p>React Shopping</p>
@@ -147,7 +148,7 @@ const Cart = () => {
     <>
       <div className="cart">
         <i className={`bx bxs-cart`}></i>
-        <p>Cart {count}</p>
+        <p>Cart {10}</p>
       </div>
     </>
   );
