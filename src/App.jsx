@@ -148,7 +148,7 @@ const Cart = () => {
     <>
       <div className="cart">
         <i className={`bx bxs-cart`}></i>
-        <p>Cart {10}</p>
+        <p>Cart {0}</p>
       </div>
     </>
   );
